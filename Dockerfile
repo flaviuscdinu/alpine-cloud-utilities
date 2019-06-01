@@ -8,6 +8,7 @@ RUN apk -v --update add \
     curl \
     bash \
     make \
+    openssh \
     && \
   apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev && \
   ln -s /usr/bin/python3 /usr/bin/python && \
