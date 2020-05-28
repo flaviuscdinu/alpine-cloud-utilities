@@ -21,8 +21,8 @@ RUN apk -v --update add \
   python3 -m pip install oci-cli
 
 RUN cd /tmp \
-    && wget https://releases.hashicorp.com/terraform/0.12.0/terraform_0.12.0_linux_amd64.zip \
-    && unzip terraform_0.12.0_linux_amd64.zip \
+    && wget https://releases.hashicorp.com/terraform/0.12.26/terraform_0.12.26_linux_amd64.zip \
+    && unzip terraform_0.12.26_linux_amd64.zip \
     && mv terraform /usr/local/bin/ \
-    && rm -rf terraform_0.12.0_linux_amd64.zip
+    && rm -rf terraform_0.12.26_linux_amd64.zip
 
