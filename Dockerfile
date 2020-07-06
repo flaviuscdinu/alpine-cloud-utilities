@@ -9,6 +9,7 @@ RUN apk -v --update add \
     bash \
     make \
     openssh \
+    docker \
     && \
   apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev && \
   ln -s /usr/bin/python3 /usr/bin/python && \
