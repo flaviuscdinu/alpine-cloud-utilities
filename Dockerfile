@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.11
 
 LABEL version="1.1"
 
@@ -13,13 +13,14 @@ RUN apk -v --update add \
     && \
   apk add --virtual=build gcc libffi-dev musl-dev openssl-dev python3-dev binutils musl go && \
   ln -s /usr/bin/python3 /usr/bin/python && \
-  python3 -m pip install --upgrade pip && \
-  python3 -m pip install awscli && \
-  python3 -m pip install boto3 && \
-  python3 -m pip install azure-cli && \
-  python3 -m pip install ansible && \ 
-  python3 -m pip install oci && \ 
-  python3 -m pip install oci-cli
+  apk add py3-pip && \
+  pip3 install --upgrade pip && \
+  pip3 install awscli && \
+  pip3 install boto3 && \
+  pip3 install azure-cli && \
+  pip3 install ansible && \ 
+  pip3 install oci && \ 
+  pip3 install oci-cli
 
 ENV GOPATH /go
 ENV PATH $GOPATH/bin:$PATH
