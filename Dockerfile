@@ -32,3 +32,4 @@ RUN cd /tmp \
     && mv terraform /usr/local/bin/ \
     && rm -rf terraform_0.14.9_linux_amd64.zip
 
+RUN apk add --update nodejs npm
